@@ -13,6 +13,7 @@
     0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   --header-border-color: #ececec;
   --container-projects-border: #eeeeee;
+  --hero-overlay: rgba(47, 48, 58, 0.4);
 }
 
 /* цвет героя background: #2F303A; */
@@ -165,12 +166,17 @@ img {
 /* hero */
 
 .hero {
+  min-height: 600px;
+  max-width: 1600px;
   margin-bottom: 0;
   padding-top: 200px;
   padding-bottom: 200px;
 
   text-align: center;
   background-color: var(--accent-bg-color);
+  background-image: linear-gradient(var(--hero-overlay), var(--hero-overlay)),
+    url(../images/herobg.jpg);
+  background-size: cover;
 }
 
 .hero-title {
@@ -274,7 +280,8 @@ img {
 /* our work  and our team*/
 .features-titled.centered,
 .team-titeled.centered,
-.work-title {
+.work-title,
+.clients-titled {
   margin-top: 0;
   margin-bottom: 50px;
 
@@ -348,8 +355,44 @@ img {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  margin-bottom: 16px;
 
   color: var(--paragraph-text-color);
+}
+
+/* social icons */
+.social-list {
+  display: flex;
+  justify-content: center;
+}
+
+.social-list-item + .social-list-item {
+  margin-left: 10px;
+}
+
+.social-list-link {
+  outline: 1px solid teal;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.clients-list {
+  display: flex;
+  justify-content: center;
+}
+
+.clients-list-link + .clients-list-link {
+  width: 170px;
+  height: 92px;
+  margin-left: 30px;
+
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
 }
 
 /* footer */
