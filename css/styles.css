@@ -57,12 +57,6 @@ img {
   height: auto;
 }
 
-.header-portfolio {
-  width: 1600px;
-  margin: 0 auto;
-  border-bottom: 1px solid var(--header-border-color);
-}
-
 .container,
 .page-header {
   width: 1200px;
@@ -72,6 +66,7 @@ img {
 
 .header {
   background-color: var(--accessorial-text-color);
+  border-bottom: 1px solid var(--header-border-color);
 }
 
 .page-header {
@@ -171,8 +166,8 @@ img {
   fill: var(--icon-color);
 }
 
-.auth-nav-icon:hover,
-.auth-nav-icon:focus {
+.auth-nav-link:hover .auth-nav-icon,
+.auth-nav-link:focus .auth-nav-icon {
   fill: currentColor;
 }
 
